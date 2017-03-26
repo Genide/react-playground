@@ -10,6 +10,7 @@ class App extends Component {
         // Font size should have px at the end of it.
         // https://www.w3schools.com/css/css_font.asp
         "fontSize": 100,
+        // What would happen if you put in another color, say red?
         "color": "black"
       }
     };
