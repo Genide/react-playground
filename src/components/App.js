@@ -7,6 +7,8 @@ class App extends Component {
     this.state = {
       text: "Hello World",
       someStyle: {
+        // Font size should have px at the end of it.
+        // https://www.w3schools.com/css/css_font.asp
         "fontSize": 100,
         "color": "black"
       }
@@ -20,16 +22,23 @@ class App extends Component {
   }
 
   onChangeFontSize(e){
+    // Fix formatting. This is way too long.
+    // The value e.target.value is a number.
+    // You need to add px to the end of it.
+    // Can you think of another way to no have to save the color?
     this.setState({someStyle: {"fontSize": e.target.value, "color": this.state.someStyle.color}});
   }
 
   onChangeFontColor(e){
+    // Fix formatting. This is way too long.
+    // Can you think of another way to not have to save the font size?
     this.setState({someStyle: {"color": e.target.value, "fontSize": this.state.someStyle.fontSize}});
   }
 
   render() {
     return (
       <div className="App">
+        {/* Can you change this to an actual textarea? */}
         <input
           type="textarea"
           id="textInput"
